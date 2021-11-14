@@ -1,0 +1,12 @@
+1. as a user, i want to create to do work with map location
+    1-1. map where user click to add new todo work(best way to get location coordinates)
+    1-2. Geolocation to display map at current location
+    1-3. form to input time and to do thing
+2. as a user, i want to delete an update my work
+    2-1. click the delete to delete my work and also delete on the map
+    2-2. click the edit to toggle the form edit my work and time
+3. as a user, i want to see all my to do work, and click can see what location
+    3-1. display all work on a list, also on the map
+4. as a user, i want to see all my todo work after i close the page, and go back
+    4-1. store the work list in localstorage
+    4-2. on page load, load the work form localstorage, and display
