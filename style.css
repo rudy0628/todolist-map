@@ -147,7 +147,7 @@ body {
 
 /* map */
 #map {
-	height: 100%;
+	height: 90vh;
 	width: 55vw;
 	border-radius: 0 10px 10px 0;
 }
@@ -185,4 +185,19 @@ body {
 
 .nav {
 	margin-bottom: 10px;
+}
+
+@media (max-width: 850px) {
+	.container {
+		display: block;
+		height: auto;
+	}
+
+	.sidebar {
+		width: auto;
+	}
+
+	#map {
+		width: 100%;
+	}
 }
