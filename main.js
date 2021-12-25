@@ -251,7 +251,7 @@ class App {
             <h2 class="work--list--title">👉 ${work.work}</h2>
             <h3 class="work--list--time">⌚ ${work.time.replace('T', ' ')}</h3>
 			<h4 class="work--list--weather">current weather : ${work.weather}</h4>
-            <div class="workItem-btn-group">
+            <div class="workitem-btn-group">
                 <button class="btn btn--edit">edit ✍</button>
                 <button class="btn btn--delete">delete 🗑</button>
             </div>
