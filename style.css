@@ -183,7 +183,7 @@ body {
 
 /* global style */
 .hidden {
-	transform: translateX(-30rem);
+	transform: translateX(-50rem);
 	height: 0;
 	padding: 0 2.25rem;
 	margin-bottom: 0;
@@ -203,6 +203,7 @@ body {
 	.container {
 		display: block;
 		height: auto;
+		width: 80vw;
 	}
 
 	.sidebar {
