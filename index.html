@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
-    <script defer src="./main.js"></script>
-    <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-    <title>todolist map</title>
-</head>
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="nav">
-                <button class="btn btn--reset">reset 💱</button>
-                <button class="btn btn--showAll">show all work 👀</button>
-            </div>
-            <ul class="work">
-                <form class="form form--work hidden">
-                    <h2 class="form--title">create new work</h2>
-                    <label for="form__input--work">work</label>
-                    <input type="text" name="form__input--work" class="form__input form__input--work" placeholder="what you want to do...">
-                    <label for="form__input--time">time</label>
-                    <input type="datetime-local" name="form__input--time" class="form__input form__input--time">
-                    <h4 class="form__error form__error--work"></h4>
-                    <button class="btn btn-submit">ADD ✅</button>
-                </form>
-                <!-- <li class="work--list--item" data-id="123456789">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			crossorigin=""
+		/>
+		<script defer src="./main.js"></script>
+		<script
+			defer
+			src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+			crossorigin=""
+		></script>
+		<title>todolist map</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="sidebar">
+				<div class="nav">
+					<button class="btn btn--reset">reset</button>
+					<button class="btn btn--showAll">show all work</button>
+				</div>
+				<ul class="work">
+					<form class="form form--work hidden">
+						<h2 class="form--title">create new work</h2>
+						<label for="form__input--work">work</label>
+						<input
+							type="text"
+							name="form__input--work"
+							class="form__input form__input--work"
+							placeholder="what you want to do..."
+						/>
+						<label for="form__input--time">time</label>
+						<input
+							type="datetime-local"
+							name="form__input--time"
+							class="form__input form__input--time"
+						/>
+						<h4 class="form__error form__error--work"></h4>
+						<button class="btn btn-submit">ADD</button>
+					</form>
+					<!-- <li class="work--list--item" data-id="123456789">
                     <h2 class="work--list--title">go to supermarket</h2>
                     <h3 class="work--list--time">2021/07/14</h3>
                     <h4 class="work--list--weather">sunny</h4>
@@ -42,10 +61,10 @@
                         <button class="btn btn-submit">ADD ✅</button>
                     </form>
                 </li> -->
-            </ul>
-            <p class="copyright">&copy; rudy todolistmap 2021</p>
-        </div>
-        <div id="map"></div>
-    </div>
-</body>
+				</ul>
+				<p class="copyright">&copy; rudy todolistmap 2022</p>
+			</div>
+			<div id="map"></div>
+		</div>
+	</body>
 </html>

@@ -34,6 +34,7 @@ body {
 	border: 1px solid ghostwhite;
 	border-radius: 10px;
 	background: white;
+	overflow: hidden;
 }
 
 .sidebar {
@@ -61,10 +62,12 @@ body {
 
 .form label {
 	margin-bottom: 0.8rem;
+	font-size: 2rem;
 }
 
 .form--title {
 	margin-bottom: 1.8rem;
+	font-size: 3rem;
 }
 
 .form__input {
@@ -73,15 +76,15 @@ body {
 	height: 30px;
 	border-bottom: #0072ff 2px solid;
 	transition: 0.1s all;
-	padding: 1.6rem 0.8rem;
+	padding: 2rem 1rem;
 	margin-bottom: 1.2rem;
+	font-size: 1.6rem;
 }
 
 .form__input:focus {
 	color: black;
 	outline: none !important;
 	border-bottom: 2px solid red;
-	font-size: 0.9rem;
 }
 
 .form__error {
@@ -92,8 +95,8 @@ body {
 
 /* button */
 .btn {
-	padding: 0.8rem 1.6rem;
-	font-size: 1.6rem;
+	padding: 1rem 2rem;
+	font-size: 2rem;
 	border: none;
 	border-radius: 9px;
 	background-color: #e7f5ff;
@@ -143,14 +146,14 @@ body {
 .work--list--time {
 	margin: 1.2rem 0;
 	font-weight: 300;
-	font-size: 1.6rem;
+	font-size: 2rem;
 }
 
 .work--list--weather {
 	margin-bottom: 2rem;
 	font-weight: 300;
-	font-size: 1.4rem;
-	color: #eee;
+	font-size: 2rem;
+	color: #333;
 }
 
 .workitem-btn-group {
@@ -161,12 +164,11 @@ body {
 #map {
 	height: 90vh;
 	width: 55vw;
-	border-radius: 0 10px 10px 0;
 }
 
 /* popup */
 .popup {
-	font-size: 0.8rem;
+	font-size: 1.2rem;
 }
 
 .leaflet-popup .leaflet-popup-content-wrapper {
@@ -183,7 +185,7 @@ body {
 
 /* global style */
 .hidden {
-	transform: translateX(-50rem);
+	transform: translateX(-60rem);
 	height: 0;
 	padding: 0 2.25rem;
 	margin-bottom: 0;
@@ -193,6 +195,7 @@ body {
 .copyright {
 	margin-top: auto;
 	text-align: center;
+	font-size: 1.6rem;
 }
 
 .nav {

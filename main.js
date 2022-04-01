@@ -17,7 +17,9 @@ class Work {
 	async _setWeather() {
 		try {
 			const [lat, lng] = this.coords;
-			const dataRes = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=efe2f5d493e6d4639fa096da2405d21d`);
+			const dataRes = await fetch(
+				`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=efe2f5d493e6d4639fa096da2405d21d`
+			);
 			const data = await dataRes.json();
 			this.weather = data.weather['0'].description;
 		} catch (e) {
@@ -68,9 +70,12 @@ class App {
 	}
 	_getLocation() {
 		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(this._loadMap.bind(this), function () {
-				alert('cannot get your position');
-			});
+			navigator.geolocation.getCurrentPosition(
+				this._loadMap.bind(this),
+				function () {
+					alert('cannot get your position');
+				}
+			);
 		}
 	}
 	_loadMap(position) {
@@ -78,7 +83,8 @@ class App {
 		this.#map = L.map('map').setView([latitude, longitude], this.#mapZoom);
 
 		L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+			attribution:
+				'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 		}).addTo(this.#map);
 
 		this.#map.on('click', this._showFrom.bind(this));
@@ -235,8 +241,8 @@ class App {
 			}, 1000);
 
 			//render work
-			workListTitle.textContent = `👉 ${workValue}`;
-			workListTime.textContent = `⌚ ${timeValue.replace('T', ' ')}`;
+			workListTitle.textContent = `${workValue}`;
+			workListTime.textContent = `${timeValue.replace('T', ' ')}`;
 
 			//re-render marker
 			this._reRenderMarker();
@@ -248,12 +254,12 @@ class App {
 	_renderWork(work) {
 		const html = `
         <li class="work--list--item" data-id="${work.id}">
-            <h2 class="work--list--title">👉 ${work.work}</h2>
-            <h3 class="work--list--time">⌚ ${work.time.replace('T', ' ')}</h3>
+            <h2 class="work--list--title">${work.work}</h2>
+            <h3 class="work--list--time">${work.time.replace('T', ' ')}</h3>
 			<h4 class="work--list--weather">current weather : ${work.weather}</h4>
             <div class="workitem-btn-group">
-                <button class="btn btn--edit">edit ✍</button>
-                <button class="btn btn--delete">delete 🗑</button>
+                <button class="btn btn--edit">edit</button>
+                <button class="btn btn--delete">delete</button>
             </div>
             <form class="form form--edit hidden">
                 <label for="form__input--work">work</label>
@@ -261,7 +267,7 @@ class App {
                 <label for="form__input--time">time</label>
                 <input type="datetime-local" name="form__input--time" class="form__input form__input--time">
                 <h4 class="form__error form__error--work"></h4>
-                <button class="btn btn-submit">ADD ✅</button>
+                <button class="btn btn-submit">ADD</button>
             </form>
         </li>
         `;
